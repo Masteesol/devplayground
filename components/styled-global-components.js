@@ -46,6 +46,13 @@ export const FlexRowContainer = tw.div`
     flex-row
 `;
 
+export const FlexRowCentered = tw.div`
+    w-full
+    flex
+    items-center
+    justify-center
+`;
+
 export const FlexColCentered = tw.div`
     w-full
     flex

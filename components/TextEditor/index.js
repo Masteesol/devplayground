@@ -3,7 +3,10 @@ import dynamic from "next/dynamic";
 import { useState } from "react";
 import "react-quill/dist/quill.snow.css";
 import styled from "styled-components";
-import { FlexColContainer } from "../styled-global-components";
+import {
+  FlexRowContainer,
+  FlexColContainer,
+} from "../styled-global-components";
 
 const QuillNoSSRWrapper = dynamic(import("react-quill"), {
   ssr: false,
@@ -32,12 +35,28 @@ const modules = {
 
 const StyledQuillContainer = styled.div`
   .ql-editor {
-    min-height: 200px;
-    resize: vertical;
+    box-shadow: 0px 5px 9px -1px #d0d0d0;
+    min-height: 80vh;
+    resize: both;
+  }
+
+  .ql-toolbar,
+  .ql-editor {
+    background-color: white;
+    box-shadow: 0px 5px 9px -1px #d0d0d0;
+  }
+  .ql-snow,
+  .ql-editor,
+  .ql-container {
+    border: none;
   }
   .ql-container {
-    max-height: 60vh;
+    max-height: 90vh;
     overflow-y: auto;
+    box-shadow: 0px 5px 9px -1px #d0d0d0;
+  }
+  #form-input {
+    box-shadow: 0px 5px 9px -1px #d0d0d0;
   }
 `;
 
@@ -79,15 +98,19 @@ export default function Home() {
   return (
     <form onSubmit={submitHandler}>
       <FlexColContainer className="gap-5">
-        <label htmlFor="title">Title</label>
-        <input
-          type="text"
-          value={title}
-          name="title"
-          placeholder="Enter a title"
-          onChange={handleTitleChange}
-          required
-        />
+        <FlexRowContainer className="justify-between">
+          <input
+            type="text"
+            value={title}
+            name="title"
+            placeholder="Enter a title"
+            className="border-none shadow-sm flex-1"
+            onChange={handleTitleChange}
+            required
+          />
+          <Button className="max-w-sm">Save</Button>
+        </FlexRowContainer>
+
         <StyledQuillContainer>
           <QuillNoSSRWrapper
             modules={modules}
@@ -95,7 +118,7 @@ export default function Home() {
             theme="snow"
           />
         </StyledQuillContainer>
-        <Button>Save</Button>
+
         {/*<p>{content}</p>*/}
       </FlexColContainer>
     </form>

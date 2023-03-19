@@ -22,10 +22,7 @@ export default function EditorPage() {
       </Head>
       <PageLayout>
         <FlexColCentered className="h-[100vh]">
-          <H1>Text Editor</H1>
-          <DynamicModal>
-            <TextEditor />
-          </DynamicModal>
+          <TextEditor />
         </FlexColCentered>
       </PageLayout>
     </>
