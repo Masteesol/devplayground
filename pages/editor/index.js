@@ -21,7 +21,7 @@ export default function EditorPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <FlexColCentered className="h-[100vh]">
+        <FlexColCentered className="h-[100vh] mt-[2.5rem]">
           <TextEditor />
         </FlexColCentered>
       </PageLayout>
