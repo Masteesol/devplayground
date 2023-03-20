@@ -17,7 +17,7 @@ const PageLayout = ({ children }) => {
   return (
     <FlexColContainer className="w-full min-h-[100vh] bg-slate-50">
       <Nav ref={navRef} />
-      <FlexRowContainer>
+      <FlexRowContainer className="relative">
         <Sidebar />
         <FlexColContainer id="main" className="w-full overflow-auto">
           <FlexColContainer

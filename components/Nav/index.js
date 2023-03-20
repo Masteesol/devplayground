@@ -1,6 +1,5 @@
 import { forwardRef } from "react";
 import { Navbar } from "flowbite-react";
-import { AccountIcon } from "../icons";
 
 const Nav = forwardRef((props, ref) => {
   console.log(props);
