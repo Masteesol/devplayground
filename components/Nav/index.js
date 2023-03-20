@@ -19,4 +19,6 @@ const Nav = forwardRef((props, ref) => {
   );
 });
 
+Nav.displayName = "Nav";
+
 export default Nav;
