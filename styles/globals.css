@@ -4,9 +4,8 @@
 
 #__next {
   heigth: 100vh;
-  overflow-y: auto;
 }
 
-.ql-editor {
-  background-color: "red";
+body {
+  overflow-y: hidden;
 }

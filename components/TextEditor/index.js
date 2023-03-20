@@ -51,8 +51,6 @@ const StyledQuillContainer = styled.div`
     border: none;
   }
   .ql-container {
-    max-height: 90vh;
-    overflow-y: auto;
     box-shadow: 0px 5px 9px -1px #d0d0d0;
   }
   #form-input {

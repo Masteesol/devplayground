@@ -1,15 +1,8 @@
 import Head from "next/head";
 import React from "react";
-import dynamic from "next/dynamic";
 import PageLayout from "../../components/PageLayout";
 import TextEditor from "../../components/TextEditor";
-import { FlexColCentered, H1 } from "@/components/styled-global-components";
-const DynamicModal = dynamic(
-  () => import("../../components/Modals/BaseModal"),
-  {
-    ssr: false,
-  }
-);
+import { FlexColCenteredX } from "@/components/styled-global-components";
 
 export default function EditorPage() {
   return (
@@ -21,9 +14,9 @@ export default function EditorPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <FlexColCentered className="h-[100vh] mt-[2.5rem]">
+        <FlexColCenteredX className="h-[100vh] mt-6">
           <TextEditor />
-        </FlexColCentered>
+        </FlexColCenteredX>
       </PageLayout>
     </>
   );
