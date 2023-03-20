@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Sidebar, Button } from "flowbite-react";
 import { EditIcon, HomeIcon, VerticalMenuIcon } from "../icons";
 
@@ -8,6 +8,20 @@ const SidebarElement = () => {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      } else {
+        setIsOpen(true);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className={isOpen ? "h-0" : ""}>
       {isOpen ? (
