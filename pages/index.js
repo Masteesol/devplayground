@@ -17,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <PageLayout>
-        <FlexColCentered className="min-h-[100vh]">
+        <FlexColCentered className="min-h-full">
           <H1>Dev Playground</H1>
         </FlexColCentered>
       </PageLayout>

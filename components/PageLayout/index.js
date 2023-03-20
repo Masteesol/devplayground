@@ -13,11 +13,13 @@ const PageLayout = ({ children }) => {
   return (
     <FlexColContainer className="w-full min-h-[100vh] bg-slate-50">
       <Nav ref={navRef} />
-      <FlexColContainer
-        id="main"
-        className="max-w-[1980px] w-full mx-auto px-3 xl:px-10 overflow-auto"
-      >
-        {children}
+      <FlexColContainer id="main" className="w-full overflow-auto">
+        <FlexColContainer
+          id="main"
+          className="max-w-[1980px] h-full w-full mx-auto px-3 xl:px-10"
+        >
+          {children}
+        </FlexColContainer>
       </FlexColContainer>
     </FlexColContainer>
   );
