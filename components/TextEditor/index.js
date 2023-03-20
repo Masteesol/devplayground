@@ -106,7 +106,9 @@ export default function Home() {
             onChange={handleTitleChange}
             required
           />
-          <Button className="max-w-sm">Save</Button>
+          <Button className="max-w-sm">
+            {isDraft ? "Save Draft" : "Publish"}
+          </Button>
         </FlexRowContainer>
 
         <StyledQuillContainer>

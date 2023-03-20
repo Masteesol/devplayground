@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
 import { Navbar } from "flowbite-react";
+import { AccountIcon } from "../icons";
 
 const Nav = forwardRef((props, ref) => {
   console.log(props);
@@ -12,7 +13,6 @@ const Nav = forwardRef((props, ref) => {
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Navbar.Link href="/">Home</Navbar.Link>
-          <Navbar.Link href="/editor">Editor</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
     </div>
