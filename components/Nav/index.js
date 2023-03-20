@@ -2,6 +2,7 @@ import { forwardRef } from "react";
 import { Navbar } from "flowbite-react";
 
 const Nav = forwardRef((props, ref) => {
+  console.log(props);
   return (
     <div ref={ref}>
       <Navbar fluid={true} rounded={true} className="w-full">
