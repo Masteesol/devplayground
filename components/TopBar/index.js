@@ -9,10 +9,6 @@ const Nav = forwardRef((props, ref) => {
         <Navbar.Brand>
           <span>Dev Playground</span>
         </Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse>
-          <Navbar.Link href="/">Home</Navbar.Link>
-        </Navbar.Collapse>
       </Navbar>
     </div>
   );

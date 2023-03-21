@@ -24,7 +24,7 @@ export const HomeIcon = () => {
       viewBox="0 0 24 24"
       strokeWidth={1}
       stroke="black"
-      className="h-7 w-67"
+      className="h-6 w-6"
     >
       <path
         strokeLinecap="round"
@@ -116,7 +116,7 @@ export const EditIcon = () => {
       viewBox="0 0 24 24"
       strokeWidth={1}
       stroke="currentColor"
-      className="w-7 h-7"
+      className="w-6 h-6"
     >
       <path
         strokeLinecap="round"
